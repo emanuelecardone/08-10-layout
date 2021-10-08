@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+il float non si eredita
+si comporta come un inline-block
+sposta un elemento in uno dei lati del suo contenitore
+*/
+
+p{
+    margin: 20px 20px;
+    clear: both; /* il clear fa si che nessun elemento possa floatare su questo */
+}
+
+/* il block prende il 100% del contenuto del genitore
+l'inline solo la grandezza del contenuto 
+*/
+
+img{
+    width: 300px;
+    float: right;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+}
+
+.red{
+    background-color: red;
+    float: left;
+    width: 30%;
+}
+
+.blue{
+    background-color: blue;
+    width: 70%;
+    float: right;
+}
+
+/* gli elementi che hanno il float vanno FUORI dal flusso quindi non danno larghezza al contenitore */
+/* quindi si da SEMPRE al genitore diretto un clearfix cioè un insieme di regole */
+
+/* questa è la migliore soluzione fino ad ora bisogna SEMPRE farla cosi*/
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dx{
+    width: 70%;
+    float: right;
+}
+
+.sx{
+    width: 30%;
+    float: left;
+}
+
+/* lo spazio tra 2 colonne (che posso ottenere con un margin e diminuendo la larghezza di una o entrambe le colonne) si chiama gutter
+di solito si fa una classe comune per le colonne e si da il float left a tutte
+ */
