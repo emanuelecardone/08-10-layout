@@ -64,5 +64,8 @@ img{
 }
 
 /* lo spazio tra 2 colonne (che posso ottenere con un margin e diminuendo la larghezza di una o entrambe le colonne) si chiama gutter
-di solito si fa una classe comune per le colonne e si da il float left a tutte
+di solito si fa una classe comune per le colonne e si da il float left a tutte.
+lo spazio verticale delle colonne è suddiviso in moduli, cioè le righe che suddividono tale colonna ed ogni riga ha una sua altezza (line-height)
+di default la line-height corrisponde all'altezza del testo contenuto nel modulo più il 20% dell'altezza del testo stesso. 
+la line-height può essere impostata
  */
